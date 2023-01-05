@@ -24,8 +24,11 @@
             </p>
             <h3 class="mt-4 font-bold">ESPECIALIDADES:</h3>
             <ul class="">
-                <li>Contador</li>
-                <li>Ingeniero de Computacion y Sistemas</li>
+                <!-- <li>Contador</li>
+                <li>Ingeniero de Computacion y Sistemas</li> -->
+                <div *ngFor="let res of listaEspecialidades">
+                    <li>{{res}}</li>
+                </div>
             </ul>
         </div>
     </div>
@@ -54,8 +57,8 @@
         </div>
         <div>
             <label for="nombres">Especialidades:</label>
-            <input class="border ml-3" type="text" [(ngModel)]="especialidades">
-            <!-- <button (click)="añadir(especialidades.value)">Añadir Especialidad</button> -->
+            <input class="border ml-3" type="text" #especialidades>
+            <button (click)="add(especialidades.value)">Añadir Especialidad</button>
         </div>
       </div>
   </div>

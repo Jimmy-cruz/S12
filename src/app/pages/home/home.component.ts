@@ -10,7 +10,13 @@ export class HomeComponent {
   nombres:string = 'Jimmy Aldair';
   apellidos:string = 'Cruz Perez';
   edad:string = '26';
-  especialidades!:string[];
+  listaEspecialidades = ['Contabilidad', 'Ing. Computacion y Sistemas'];
 
+  add(espcialidades:String){
+    this.listaEspecialidades.push(String(espcialidades));
+  }
 
+  // addData(txtdato:String){
+  //   this.datos.push(String(txtdato));
+  // }
 }
