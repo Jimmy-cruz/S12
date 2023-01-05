@@ -1,1 +1,62 @@
-<p>home works!</p>
+<!-- <p>home works!</p> -->
+
+<!-- Inicio de CV datos personales -->
+<div class="grid grid-cols-2 gap-2 mt-4 h-96">
+    <div class="border text-center">
+        <div class="mb-3 mt-4 border-b-2 border-indigo-500">
+            <h2 class="font-bold text-indigo-500" >DATOS PERSONALES:</h2>
+        </div>
+        <div>
+            <h3 class="mt-4 font-bold">NOMBRES:</h3>
+            <p>
+                {{nombres}}
+                <!-- Jimmy Aldair -->
+            </p>
+            <h3 class="mt-4 font-bold">APELLIDOS:</h3>
+            <p>
+                {{apellidos}}
+                <!-- Cruz Perez -->
+            </p>
+            <h3 class="mt-4 font-bold">EDAD:</h3>
+            <p>
+                {{edad}} años
+                <!-- 26 años -->
+            </p>
+            <h3 class="mt-4 font-bold">ESPECIALIDADES:</h3>
+            <ul class="">
+                <li>Contador</li>
+                <li>Ingeniero de Computacion y Sistemas</li>
+            </ul>
+        </div>
+    </div>
+    <div class="border place-items-center">
+        <div class="">
+            <img class="rounded-full max-h-96" src="https://scontent-lim1-1.xx.fbcdn.net/v/t31.18172-8/20247943_1751935441546155_2249464329466978418_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGm9tc29YHrjCxKZwoN_of5HiK_ddEBGrIeIr910QEasvFWvURKBedlZyaR6eUKUHxNRMwAfZZ3bpjxKvYSLUbs&_nc_ohc=-T3YmZYtm2sAX8wUifw&_nc_ht=scontent-lim1-1.xx&oh=00_AfAOL4yb9xJHAIJyUnxLghS6M2ZIdj4bk8iguDrS6R8FjQ&oe=63DE6503" alt="">
+        </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-10">
+    <h2>¿QUIERES PERSONALIZAR NUEVOS DATOS?</h2> 
+    <input type="checkbox" [(ngModel)]="personalizar"> <span class="ml-2">ACTIVAR</span>
+    <div class="border mt-5" *ngIf="personalizar">
+        <div>
+            <label for="nombres">Nombres:</label>
+            <input class="border ml-11" type="text" [(ngModel)]="nombres">
+        </div>
+        <div>
+            <label for="nombres">Apellidos:</label>
+            <input class="border ml-11" type="text" [(ngModel)]="apellidos">
+        </div>
+        <div class="pl-3">
+            <label for="nombres">Edad:</label>
+            <input class="border ml-16" type="text" [(ngModel)]="edad">
+        </div>
+        <div>
+            <label for="nombres">Especialidades:</label>
+            <input class="border ml-3" type="text" [(ngModel)]="especialidades">
+            <!-- <button (click)="añadir(especialidades.value)">Añadir Especialidad</button> -->
+        </div>
+      </div>
+  </div>
+ 

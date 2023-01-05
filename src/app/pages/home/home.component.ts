@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  personalizar!:any;
+  nombres:string = 'Jimmy Aldair';
+  apellidos:string = 'Cruz Perez';
+  edad:string = '26';
+  especialidades!:string[];
+
 
 }
